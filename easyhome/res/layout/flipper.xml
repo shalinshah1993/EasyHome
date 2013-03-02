@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/light4" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fan2" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ac1" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tv6" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/curtain3" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dvd4" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/toy" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/plug" />
+    </ViewFlipper>
+
+</LinearLayout>

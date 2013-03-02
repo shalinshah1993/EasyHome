@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cepal.easyhome"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE"
+        android:required="true" />
+    <uses-permission
+        android:name="android.permission.CHANGE_WIFI_STATE"
+        android:required="true" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:icon="@drawable/home_icon"
+        android:label="E-mukt"
+        android:screenOrientation="portrait" >
+        <activity
+            android:name=".startingPoint"
+            android:label="E-mukt" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".choose"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.CHOOSE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".flipper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.FLIPPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Prefs"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.PREFS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home_menu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.HOME_MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".toy"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.TOY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fan"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.FAN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".light"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.LIGHT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tv"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.TV" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dvd"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.DVD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ac"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.AC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".curtain"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.CURTAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".plug"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.PLUG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".connection"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.CONNECTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".light_flipper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.LIGHT_FLIPPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fan_flipper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.FAN_FLIPPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ac_flipper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.AC_FLIPPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tv_flipper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.TV_FLIPPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".curtain_flipper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.CURTAIN_FLIPPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dvd_flipper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.DVD_FLIPPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".toy_flipper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.TOY_FLIPPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".plug_flipper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.PLUG_FLIPPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device"
+            android:theme="@android:style/Theme.Dialog" />
+        
+         <activity
+            android:name=".delete1"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.DELETE1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         
+         <activity
+            android:name=".delete3"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.DELETE3" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         
+         <activity
+            android:name=".DeviceListActivity2"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.CHOOSE3" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+            <activity
+            android:name=".select_conn"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.CHOOSE2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+
+</manifest>

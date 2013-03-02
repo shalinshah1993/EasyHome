@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+  
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="checkbox"
+        android:summary="check to enable Auto scroll"
+        android:title="Enable Autoscroll ?" >
+    </CheckBoxPreference>
+    
+   
+    
+    
+
+    <EditTextPreference
+        android:inputType="number"
+        android:key="time"
+        android:summary="Enter the time for transition (in seconds,only numbers)"
+        android:title="Transition time " >
+    </EditTextPreference>
+
+</PreferenceScreen>

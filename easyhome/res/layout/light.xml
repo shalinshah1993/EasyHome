@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="fill"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:weightSum="1.0" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.10"
+        android:text="LIGHT"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:layout_weight="0.40"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.30"
+            android:scaleType="fitCenter"
+            android:src="@drawable/on_f" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="fill"
+            android:orientation="vertical"
+            
+            android:weightSum="1.0" >
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter" 
+                android:layout_weight="0.30"/>
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_weight="0.70" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:layout_weight="0.50"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="0.50"
+            android:scaleType="fitCenter"
+             
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="0.50"
+            android:scaleType="fitCenter"
+             
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    
+
+</LinearLayout>
