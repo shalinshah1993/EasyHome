@@ -65,6 +65,14 @@
             android:layout_height="fill_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/plug" />
+        
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/speak" />        
+        
     </ViewFlipper>
 
 </LinearLayout>

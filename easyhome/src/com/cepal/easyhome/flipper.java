@@ -33,7 +33,7 @@ public class flipper extends Activity implements OnClickListener {
 
 	ViewFlipper flippy;
 
-	ImageButton ib1, ib2, ib3, ib4, ib5, ib6, ib7, ib8;
+	ImageButton ib1, ib2, ib3, ib4, ib5, ib6, ib7, ib8 , ib9;
 
 	
 	SharedPreferences someData;
@@ -103,6 +103,7 @@ public class flipper extends Activity implements OnClickListener {
 		ib6.setOnClickListener(this);
 		ib7.setOnClickListener(this);
 		ib8.setOnClickListener(this);
+		ib9.setOnClickListener(this);
 
 		ib1.setBackgroundColor(Color.BLACK);
 		ib2.setBackgroundColor(Color.BLACK);
@@ -112,6 +113,7 @@ public class flipper extends Activity implements OnClickListener {
 		ib6.setBackgroundColor(Color.BLACK);
 		ib7.setBackgroundColor(Color.BLACK);
 		ib8.setBackgroundColor(Color.BLACK);
+		ib9.setBackgroundColor(Color.BLACK);
 	}
 
 	private void setvars_8() {
@@ -124,7 +126,7 @@ public class flipper extends Activity implements OnClickListener {
 		ib6 = (ImageButton) findViewById(R.id.imageButton6);
 		ib7 = (ImageButton) findViewById(R.id.imageButton7);
 		ib8 = (ImageButton) findViewById(R.id.imageButton8);
-
+		ib9 = (ImageButton) findViewById(R.id.imageButton9);
 	}
 
 	public boolean onCreateOptionsMenu(android.view.Menu menu) {
@@ -180,6 +182,9 @@ public class flipper extends Activity implements OnClickListener {
 			break;
 		case R.id.imageButton8:
 			i = new Intent("com.cepal.easyhome.PLUG_FLIPPER");
+			break;
+		case R.id.imageButton9:
+			i = new Intent("com.cepal.easyhome.VOICERECOG");
 			break;
 		}
 		startActivity(i);

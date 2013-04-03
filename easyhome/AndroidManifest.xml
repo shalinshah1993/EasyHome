@@ -18,12 +18,13 @@
     </uses-permission>
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:icon="@drawable/home_icon"
         android:label="E-mukt"
-        android:screenOrientation="portrait" >
+        android:screenOrientation="portrait" 
+        android:process="" >
         <activity
             android:name=".startingPoint"
             android:label="E-mukt" >
@@ -227,8 +228,7 @@
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/select_device"
             android:theme="@android:style/Theme.Dialog" />
-        
-         <activity
+        <activity
             android:name=".delete1"
             android:label="@string/app_name" >
             <intent-filter>
@@ -237,9 +237,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
-         
-         <activity
+        <activity
             android:name=".delete3"
             android:label="@string/app_name" >
             <intent-filter>
@@ -248,9 +246,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
-         
-         <activity
+        <activity
             android:name=".DeviceListActivity2"
             android:label="@string/app_name" >
             <intent-filter>
@@ -259,8 +255,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
-            <activity
+        <activity
             android:name=".select_conn"
             android:label="@string/app_name" >
             <intent-filter>
@@ -269,7 +264,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".VoiceRecog"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.cepal.easyhome.VOICERECOG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         
-    </application>
+        </application>
 
 </manifest>

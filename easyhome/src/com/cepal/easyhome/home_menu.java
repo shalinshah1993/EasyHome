@@ -27,7 +27,7 @@ import android.widget.Toast;
 public class home_menu extends Activity implements View.OnClickListener {
 	/** Called when the activity is first created. */
 
-	ImageButton ib1, ib2, ib3, ib4, ib5, ib6,ib7,ib8;
+	ImageButton ib1, ib2, ib3, ib4, ib5, ib6,ib7,ib8 ,ib9;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -64,6 +64,7 @@ public class home_menu extends Activity implements View.OnClickListener {
 		ib6 = (ImageButton) findViewById(R.id.imageButton6);
 		ib7 = (ImageButton) findViewById(R.id.imageButton7);
 		ib8 = (ImageButton) findViewById(R.id.imageButton8);
+		ib9 = (ImageButton) findViewById(R.id.imageButton9);
 		ib1.setBackgroundColor(Color.BLACK);
 		ib2.setBackgroundColor(Color.BLACK);
 		ib3.setBackgroundColor(Color.BLACK);
@@ -72,6 +73,7 @@ public class home_menu extends Activity implements View.OnClickListener {
 		ib6.setBackgroundColor(Color.BLACK);
 		ib7.setBackgroundColor(Color.BLACK);
 		ib8.setBackgroundColor(Color.BLACK);
+		ib9.setBackgroundColor(Color.BLACK);
 
 	}
 
@@ -85,6 +87,7 @@ public class home_menu extends Activity implements View.OnClickListener {
 		ib6.setOnClickListener(this);
 		ib7.setOnClickListener(this);
 		ib8.setOnClickListener(this);
+		ib9.setOnClickListener(this);
 	}
 
 	private int  getlayout() {
@@ -131,7 +134,9 @@ public class home_menu extends Activity implements View.OnClickListener {
 		case R.id.imageButton8:
 			i = new Intent("com.cepal.easyhome.PLUG");
 			break;
-		
+		case R.id.imageButton9:
+			i = new Intent("com.cepal.easyhome.VOICERECOG");
+			break;
 		}
 		startActivity(i);
 	}
