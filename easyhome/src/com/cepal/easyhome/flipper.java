@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -35,7 +36,7 @@ public class flipper extends Activity implements OnClickListener {
 
 	ImageButton ib1, ib2, ib3, ib4, ib5, ib6, ib7, ib8 , ib9;
 
-	
+	PowerManager.WakeLock wl;
 	SharedPreferences someData;
 	public static String image_path = "MySharedString";
 	public int sec;
@@ -54,6 +55,8 @@ public class flipper extends Activity implements OnClickListener {
 		setlisteners_8();
 		//setimages_8();
 
+		//Stay awake phone call
+		
 		if(getsec())
 			sec = ret;
 		else
@@ -220,7 +223,8 @@ public class flipper extends Activity implements OnClickListener {
 					}
 						//connection.write_bt("MD6X5Y1N");
 				
-				
+					wl.release();
+					//Toast.makeText(flipper.this, "Wake lock :"+wl.isHeld(), Toast.LENGTH_SHORT).show();
 					finish();
 					break;
 
@@ -263,5 +267,20 @@ public class flipper extends Activity implements OnClickListener {
 		return false;
 	}
 
-	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+		wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK,
+				"My Tag");
+		if(!wl.isHeld())
+			wl.acquire();
+	}
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		
+	}
 }

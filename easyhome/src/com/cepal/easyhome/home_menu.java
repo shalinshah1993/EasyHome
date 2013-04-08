@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.MenuInflater;
@@ -28,10 +29,13 @@ public class home_menu extends Activity implements View.OnClickListener {
 	/** Called when the activity is first created. */
 
 	ImageButton ib1, ib2, ib3, ib4, ib5, ib6,ib7,ib8 ,ib9;
+	PowerManager.WakeLock wl;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		
 		if(getlayout()==2)
 		{
 			Log.d("layout", "2 --> autoscroll");
@@ -172,6 +176,7 @@ public class home_menu extends Activity implements View.OnClickListener {
 		ask();
 	}
 	
+	
 	private void ask() {
 		DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
@@ -195,7 +200,8 @@ public class home_menu extends Activity implements View.OnClickListener {
 
 					}
 				
-				
+					wl.release();
+					//Toast.makeText(home_menu.this, "Wake lock :"+wl.isHeld(), Toast.LENGTH_SHORT).show();
 					finish();
 					break;
 
@@ -236,5 +242,17 @@ public class home_menu extends Activity implements View.OnClickListener {
 			return true;
 		else
 		return false;
+	}
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+		wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK,
+				"My Tag");
+		if(!wl.isHeld())
+			wl.acquire();
+		
 	}
 }

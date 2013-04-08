@@ -21,7 +21,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click on the above mike sto start speaking"
+        android:text="Click on the above mike to start speaking"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ListView
